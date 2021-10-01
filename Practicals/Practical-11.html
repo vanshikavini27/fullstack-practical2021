@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Practical-11</title>
+
+        <script src="https://use.fontawesome.com/221de87d0a.js"></script>
+
+        <style>
+
+            * {
+
+                padding: 0;
+
+                margin: 0;
+
+                box-sizing: border-box;
+
+                font-family: Arial, Helvetica, sans-serif;
+
+            }
+
+            .content {
+
+                width: 100%;
+
+                height: 185px;
+
+                display: flex;
+
+                justify-content: center;
+
+                align-items: center;
+
+                font-size: 40px;
+
+                color: grey;
+
+            }
+
+            footer {
+
+                width: 100%;
+
+                background-color: #4b3869;
+
+            }
+
+            .main {
+
+                display: flex;
+
+                justify-content: space-between;
+
+                padding: 10px;
+
+            }
+
+            .About {
+
+                width: 40%;
+
+            }
+
+            .main h2 {
+
+                color: #ff4c29;
+
+                font-size: 24px;
+
+            }
+
+            .About p {
+
+                text-align: justify;
+
+                color: lightgray;
+
+                line-height: 24px;
+
+                margin-top: 10px;
+
+            }
+
+            .main ul {
+
+                list-style: none;
+
+            }
+
+            .main ul li {
+
+                padding: 5px;
+
+            }
+
+            a {
+
+                text-decoration: none;
+
+                color: lightgray;
+
+            }
+
+            a:hover {
+
+                color: goldenrod;
+
+            }
+
+            span {
+
+                color: lightgray;
+
+            }
+
+            i {
+
+                color: lightgray;
+
+            }
+
+            .signup {
+
+                display: flex;
+
+                align-items: center;
+
+                padding: 10px;
+
+                justify-content: center;
+
+            }
+
+            .signup p {
+
+                color: lightgray;
+
+                font-size: 24px;
+
+            }
+
+            .signup a {
+
+                display: inline-block;
+
+                padding: 10px 25px;
+
+                color: white;
+
+                background-color: #ff6b6b;
+
+                margin-left: 10px;
+
+                border-radius: 20px;
+
+                font-size: 22px;
+
+            }
+
+            .signup a:hover {
+
+                background-color: goldenrod;
+
+            }
+
+            .icons {
+
+                display: flex;
+
+                justify-content: center;
+
+                padding: 20px;
+
+            }
+
+            .icons ul {
+
+                list-style: none;
+
+                margin: 20px;
+
+            }
+
+            .icons ul li {
+
+                display: inline-block;
+
+                width: 60px;
+
+                height: 60px;
+
+                padding: 20px;
+
+                background-color: #424242;
+
+                border-radius: 50%;
+
+                margin-right: 20px;
+
+            }
+
+            .icons ul li i {
+
+                color: white;
+
+                font-size: 24px;
+
+                line-height: 20px;
+
+                text-align: center;
+
+            }
+
+            .icons ul li:nth-child(1):hover {
+
+                background-color: rgb(94, 84, 235);
+
+            }
+
+            .icons ul li:nth-child(2):hover {
+
+                background-color: skyblue;
+
+            }
+
+            .icons ul li:nth-child(3):hover {
+
+                background-color: orangered;
+
+            }
+
+            .icons ul li:nth-child(4):hover {
+
+                background-color: rgb(94, 84, 235);
+
+            }
+
+            .copy {
+
+                display: flex;
+
+                justify-content: center;
+
+                background-color: #df711b;
+
+                padding: 30px;
+
+            }
+
+            .copy p {
+
+                color: black;
+
+                position: relative;
+
+            }
+
+            .copy p::after {
+
+                content: "";
+
+                display: block;
+
+                width: 0;
+
+                height: 2px;
+
+                background-color: rgb(89, 0, 255);
+
+                position: absolute;
+
+                right: 0;
+
+                bottom: -10px;
+
+                transition: all 0.3s;
+
+            }
+
+            .copy p:hover::after {
+
+                width: 100%;
+
+            }
+
+            hr {
+
+                opacity: 0.2;
+
+            }
+
+            @media (max-width: 767px) {
+
+                .content {
+
+                    width: 100%;
+
+                    height: 100px;
+
+                    display: flex;
+
+                    justify-content: center;
+
+                    align-items: center;
+
+                    font-size: 40px;
+
+                    color: grey;
+
+                }
+
+                footer {
+
+                    width: 100%;
+
+                    background-color: #4b3869;
+
+                }
+
+                .main {
+
+                    display: flex;
+
+                    flex-direction: row;
+
+                    flex-wrap: wrap;
+
+                    justify-content: space-between;
+
+                    padding: 30px 10px;
+
+                }
+
+                .About {
+
+                    width: 100%;
+
+                    margin-bottom: 20px;
+
+                }
+
+                .About h2 {
+
+                    font-size: 18px;
+
+                    color: #ff4c29;
+
+                    text-transform: uppercase;
+
+                }
+
+                .about p {
+
+                    text-align: justify;
+
+                    color: lightgray;
+
+                    line-height: 24px;
+
+                    margin-top: 10px;
+
+                }
+
+                .main ul {
+
+                    list-style: none;
+
+                }
+
+                .main ul li {
+
+                    padding: 5px;
+
+                }
+
+                a {
+
+                    text-decoration: none;
+
+                    color: lightgray;
+
+                }
+
+                a:hover {
+
+                    color: goldenrod;
+
+                }
+
+                span {
+
+                    color: lightgray;
+
+                }
+
+                i {
+
+                    color: lightgray;
+
+                    font-size: 20px;
+
+                    margin-right: 10px;
+
+                }
+
+                .signup {
+
+                    display: flex;
+
+                    justify-content: center;
+
+                    padding: 20px;
+
+                    align-items: center;
+
+                }
+
+                .signup p {
+
+                    color: lightgray;
+
+                    font-size: 24px;
+
+                    padding: 0;
+
+                }
+
+                .signup a {
+
+                    display: inline-block;
+
+                    padding: 10px 25px;
+
+                    color: white;
+
+                    background-color: #ff6b6b;
+
+                    margin-left: 10px;
+
+                    border-radius: 20px;
+
+                    font-size: 22px;
+
+                }
+
+                .signup a:hover {
+
+                    background-color: goldenrod;
+
+                }
+
+                .icons {
+
+                    display: flex;
+
+                    justify-content: center;
+
+                    padding: 20px;
+
+                }
+
+                .icons ul {
+
+                    list-style: none;
+
+                    margin: 20px;
+
+                }
+
+                .icons ul li {
+
+                    display: inline-block;
+
+                    width: 60px;
+
+                    height: 60px;
+
+                    padding: 20px;
+
+                    background-color: #424242;
+
+                    border-radius: 50%;
+
+                    margin-right: 20px;
+
+                }
+
+                .icons ul li i {
+
+                    color: white;
+
+                    font-size: 24px;
+
+                    line-height: 20px;
+
+                    text-align: center;
+
+                }
+
+                .icons ul li:nth-child(1):hover {
+
+                    background-color: rgb(94, 84, 235);
+
+                }
+
+                .icons ul li:nth-child(2):hover {
+
+                    background-color: skyblue;
+
+                }
+
+                .icons ul li:nth-child(3):hover {
+
+                    background-color: orangered;
+
+                }
+
+                .icons ul li:nth-child(4):hover {
+
+                    background-color: rgb(94, 84, 235);
+
+                }
+
+                .copy {
+
+                    display: flex;
+
+                    background-color: #df711b;
+
+                    justify-content: center;
+
+                    padding: 30px;
+
+                }
+
+                .copy p {
+
+                    color: black;
+
+                    position: relative;
+
+                }
+
+
+
+
+                .copy p::after {
+
+                    content: "";
+
+                    display: block;
+
+                    width: 0;
+
+                    height: 2px;
+
+                    background-color: rgb(89, 0, 255);
+
+                    position: absolute;
+
+                    right: 0;
+
+                    bottom: -10px;
+
+                    transition: all 0.3s;
+
+                }
+
+                .copy p:hover::after {
+
+                    width: 100%;
+
+                }
+
+                hr {
+
+                    opacity: 0.2;
+
+                }
+
+            }
+
+            @media (max-width: 499px) {
+
+                .content {
+
+                    width: 100%;
+
+                    height: 100px;
+
+                    display: flex;
+
+                    justify-content: center;
+
+                    align-items: center;
+
+                    font-size: 40px;
+
+                    color: grey;
+
+                }
+
+                footer {
+
+                    width: 100%;
+
+                    background-color: #4b3869;
+
+                }
+
+                .main {
+
+                    display: flex;
+
+                    flex-direction: column;
+
+                    justify-content: space-between;
+
+                    padding: 30px 10px;
+
+                }
+
+                .About {
+
+                    width: 100%;
+
+                }
+
+                .About h2 {
+
+                    font-size: 18px;
+
+                    color: #ff4c29;
+
+                    text-transform: uppercase;
+
+                    margin-top: 20px;
+
+                }
+
+                .about p {
+
+                    text-align: justify;
+
+                    color: lightgray;
+
+                    line-height: 24px;
+
+                    margin-top: 10px;
+
+                }
+
+                .main ul {
+
+                    list-style: none;
+
+                }
+
+                .main ul li {
+
+                    padding: 5px;
+
+                }
+
+                a {
+
+                    text-decoration: none;
+
+                    color: lightgray;
+
+                }
+
+                a:hover {
+
+                    color: goldenrod;
+
+                }
+
+                span {
+
+                    color: lightgray;
+
+                }
+
+                i {
+
+                    color: lightgray;
+
+                    font-size: 20px;
+
+                    margin-right: 10px;
+
+                }
+
+                .signup {
+
+                    display: flex;
+
+                    justify-content: center;
+
+                    padding: 20px;
+
+                    align-items: center;
+
+                }
+
+                .signup p {
+
+                    color: lightgray;
+
+                    font-size: 24px;
+
+                    padding: 0;
+
+                }
+
+                .signup a {
+
+                    display: inline-block;
+
+                    padding: 10px 25px;
+
+                    color: white;
+
+                    background-color: #ff6b6b;
+
+                    margin-left: 10px;
+
+                    border-radius: 20px;
+
+                    font-size: 22px;
+
+                }
+
+                .signup a:hover {
+
+                    background-color: goldenrod;
+
+                }
+
+                .icons {
+
+                    display: flex;
+
+                    justify-content: center;
+
+                    padding: 20px;
+
+                }
+
+                .icons ul {
+
+                    list-style: none;
+
+                    margin: 20px;
+
+                }
+
+                .icons ul li {
+
+                    display: inline-block;
+
+                    width: 40px;
+
+                    height: 40px;
+
+                    padding: 10px;
+
+                    background-color: #424242;
+
+                    border-radius: 50%;
+
+                    margin-right: 10px;
+
+                }
+
+                .icons ul li i {
+
+                    color: white;
+
+                    font-size: 24px;
+
+                    line-height: 20px;
+
+                    text-align: center;
+
+                }
+
+                .icons ul li:nth-child(1):hover {
+
+                    background-color: #5e54eb;
+
+                }
+
+                .icons ul li:nth-child(2):hover {
+
+                    background-color: skyblue;
+
+                }
+
+                .icons ul li:nth-child(3):hover {
+
+                    background-color: orangered;
+
+                }
+
+                .icons ul li:nth-child(4):hover {
+
+                    background-color: rgb(94, 84, 235);
+
+                }
+
+                .copy {
+
+                    display: flex;
+
+                    background-color: hsl(26, 54%, 42%);
+
+                    justify-content: center;
+
+                    padding: 30px;
+
+                }
+
+                .copy p {
+
+                    color: black;
+
+                    position: relative;
+
+                }
+
+
+
+
+                .copy p::after {
+
+                    content: "";
+
+                    display: block;
+
+                    width: 0;
+
+                    height: 2px;
+
+                    background-color: rgb(89, 0, 255);
+
+                    position: absolute;
+
+                    right: 0;
+
+                    bottom: -10px;
+
+                    transition: all 0.3s;
+
+                }
+
+                .copy p:hover::after {
+
+                    width: 100%;
+
+                }
+
+                hr {
+
+                    opacity: 0.2;
+
+                }
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <section class="content">Content Area</section>
+
+        <footer>
+
+            <section class="main">
+
+                <section class="About">
+
+                    <h2>About</h2>
+
+                    <p>
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+                        Repellendus sit est ea quia tempore aperiam quo
+
+                        doloremque quod molestiae facere! Tempore, odit at
+
+                        architecto, cumque voluptatem praesentium repellendus
+
+                        non, assumenda necessitatibus repudiandae explicabo
+
+                        culpa nesciunt. Blanditiis hic vero inventore expedita
+
+                        autem repellendus saepe, aperiam eaque porro laboriosam
+
+                        quaerat, praesentium odio. Aspernatur quos praesentium
+
+                        accusamus eius iste dicta animi ducimus. Sint
+
+                        reprehenderit obcaecati, numquam possimus laboriosam et
+
+                        molestias officiis. Corporis porro rerum doloribus,
+
+                    </p>
+
+                </section>
+
+                <section class="category">
+
+                    <h2>CATEGORIES</h2>
+
+                    <ul>
+
+                        <li><a href="#">c</a></li>
+
+                        <li><a href="#">UI Designing</a></li>
+
+                        <li><a href="#">PHP</a></li>
+
+                        <li><a href="#">JAVA</a></li>
+
+                        <li><a href="#">Android</a></li>
+
+                    </ul>
+
+                </section>
+
+                <section class="Quick">
+
+                    <h2>QUICK LINKS</h2>
+
+                    <ul>
+
+                        <li><a href="#">About us</a></li>
+
+                        <li><a href="#">Contact us</a></li>
+
+                        <li><a href="#">Contribute</a></li>
+
+                        <li><a href="#">Privacy Policy</a></li>
+
+                        <li><a href="#">Sitemap</a></li>
+
+                    </ul>
+
+                </section>
+
+                <section class="contact">
+
+                    <h2>CONTACT US</h2>
+
+                    <ul>
+
+                        <li>
+
+                            <i class="fa fa-home"></i>
+
+                            <span>GLA UNIVERSITY, Mathura, India</span>
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa fa-envelope"></i>
+
+                            <span>xefope8925@u461.com</span>
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa fa-phone-square"></i>
+
+                            <span>Mobile: 0119278728</span>
+
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </section>
+
+            <hr width="100%" />
+
+            <section class="signup">
+
+                <p>Register for free</p>
+
+                <a href="#">sign up!</a>
+
+            </section>
+
+            <hr width="100%" />
+
+            <section class="icons">
+
+                <ul>
+
+                    <li>
+
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#"><i class="fa fa-google"></i></a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <section class="copy">
+
+                <p>Copyright@copy 2021 All Rights Reserved Farddin</p>
+
+            </section>
+
+        </footer>
+
+    </body>
+
+</html>

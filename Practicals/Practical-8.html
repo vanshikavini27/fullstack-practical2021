@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical 8</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      #header {
+        /* border: 3px solid red; */
+        text-align: center;
+        background-color: grey;
+        color: white;
+        padding: 20px;
+        height: 28px;
+    
+        top: 0px;
+        position:sticky;
+        opacity: 0.9;
+      }
+      nav ul {
+        justify-content: center;
+        align-items: center;
+        opacity: 0.8;
+        float:right;
+      }
+      
+      .list {
+        display: inline-block;
+        list-style: none;
+        margin: 6px 22px;
+        font-size: large;
+      }
+      .list a {
+
+        text-decoration: none;
+        color: white;
+      }
+
+      .list a:hover {
+        background-color: rgb(252, 249, 249);
+        border: 2px solid rgb(252, 247, 247);
+        color: black;
+        padding: 0px 22px;
+        border-radius: 9px;
+      }
+      .banner {
+        /* border: 3px solid yellow; */
+        background-color: rgba(31, 168, 192, 0.733);
+        color: white;
+        background: url(../assets/photo-1521175776577-f8e0c1e5ecb7.jfif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 44px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: left;
+        text-align: start;
+        /* width: 100%; */
+        height: 670px;
+        margin-top: 40px;
+      }
+      .banner h2 {
+        padding: 120px;
+      }
+      .sec1 {
+        /* border: 3px solid brown; */
+        text-align: center;
+        background-color: white;
+        margin: 72px 0;
+      }
+      .sec1 img {
+        width: 15%;
+        margin: 42px;
+      }
+      .sec2 {
+        /* border:  2px solid pink; */
+        text-align: center;
+        /* display: inline-block; */
+      }
+      .con {
+        display: inline-flex;
+        width: 100%;
+      }
+
+      .container2 {
+        width: 50%;
+        height: 420px;
+        margin: 12px;
+        text-align: left;
+        padding: 12px 12px;
+        background-color: rgba(128, 128, 128, 0.87);
+        overflow: hidden;
+      }
+      .container2 h2 {
+        color: white;
+      }
+      .container2 p {
+        padding: 22px 0;
+        color: rgb(15, 15, 15);
+        font-size: 18px;
+        font-family: sans-serif;
+      }
+      .container3 {
+        width: 50%;
+        /* border:  5px solid black; */
+      }
+      .container3 div {
+
+        /* background-color: rgba(255, 68, 0, 0.774); */
+        text-align: center;
+        height: 135px;
+        margin: 12px;
+      }
+      .artical1 {
+        background-image: url(../assets/project3.png);
+      }
+      .artical2 {
+        background-image: url(../assets/project2.jpg);
+      }
+      .artical3 {
+        background-image: url(../assets/project4.jpg);
+      }
+      .sec3 {
+        /* border: 3px solid green; */
+          margin-top: 72px ;
+        text-align: center;
+    }
+    
+      h1 {
+          color: rgba(255, 255, 255, 0.952);
+        margin: 15px;
+        font-size: 37px;
+      }
+      .container {
+        /* border: 2px solid black ; */
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        display: flex;
+    }
+    .card {
+        background: rgb(177, 174, 174);
+        margin: 15px;
+        text-align: center;
+        width: 555px;
+        height: 425px;
+    }
+      .container .card img {
+          width: 100%;
+        }
+        .container .card p {
+        text-align: left;
+        color: white;
+        /* margin: 12px; */
+        padding: 12px;
+      }
+      button {
+          margin: 10px;
+          padding: 5px 43px;
+        border-radius: 13px;
+        background: red;
+        color: white;
+      }
+      button:hover {
+          margin: 10px;
+        padding: 8px 49px;
+        border-radius: 15px;
+        background: blue;
+    }
+      h2 {
+          font-size: 32px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .sec4 {
+      /* border:  3px solid darkblue; */
+
+      text-align: center;
+    }
+    .footer {
+      /* border:  3px solid rgb(94, 90, 90); */
+        color: white;
+        background-color: rgb(241, 153, 167);
+        padding: 25px;
+        margin: 43px 0 0 0;
+        color: black;
+    }
+    #bot{
+        display: block;
+        margin-top: 23PX;
+
+    }
+    /*  Responsive Website Work */
+    @media screen and (max-width:1232px) {
+      .sec3>.container>.card{
+        overflow:auto;
+      }
+      .sec2>.con>.container2{
+        overflow:auto ;
+      }
+    }
+    @media screen and (max-width:990px) {
+
+      .container{
+        flex-direction: column;
+      }
+      .sec3 .container .card{
+        /* flex-direction: column; */
+        width: 65%;
+      }
+      .sec2 .con{
+        display:flex;
+        flex-direction: column;
+        /* width: 100%; */
+      }
+      .sec2 .con .container2{
+        width:fit-content;
+      }
+      .sec2 .con .container3{
+        width:100%;
+      }
+      #header{
+        background-color: black;
+        opacity: 0.6;
+        position:absolute;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      .navigation-bar ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        
+      }
+
+      .navigation-bar ul li{
+        border-bottom: 2px solid goldenrod;
+        width: 25%;
+        border-radius: 9px;
+        /* border-radius: 0px; */
+      }
+      .navigation-bar ul li a:hover{
+        background: grey;
+        border:hidden;
+      }
+      .navigation-bar ul li:hover{
+        background-color: gray;
+        /* border-radius: 0px; */
+      }
+      .banner h2{
+        line-height: 250px;
+        /* overflow:scroll; */
+      }
+    }
+    </style>
+  </head>
+  <body>
+      <div id="header">
+      <header>
+        <nav class="navigation-bar">
+          <ul>
+            <li class="list"><a href="#top">HOME </a></li>
+            <li class="list"><a href="#sec2">ABOUT US </a></li>
+            <li class="list"><a href="#s1">TEAM </a></li>
+            <li class="list"><a href="#s3">TECHNOLOGIES </a></li>
+            <li class="list"><a href="#bot">CONTACT </a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="banner">
+      <h2>Practical - 8</h2>
+    </div>
+    <div class="sec1">
+      <h2 id="s1">Team Member</h2>
+      <img src="../assets/pngwing.com (3).png" alt="" />
+      <img src="../assets/pngwing.com (1).png" />
+      <img src="../assets/pngegg.png" alt="" />
+      <img src="../assets/pngwing.com.png" alt="" />
+    </div>
+    <div class="sec2" >
+      <h2  id="sec2" >About Us</h2>
+      <div class="con">
+
+        <div class="container2">
+          <h2 class="main">About Projects</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos et
+            doloremque laborum ipsum quo cumque temporibus iusto sed accusamus
+            magni ea, delectus modi rerum aspernatur quaerat atque hic a.
+            Provident laborum sit reiciendis suscipit nam tempora adipisci
+            dolore? Quo ducimus illo autem inventore maxime necessitatibus ad ea
+            unde, eveniet vitae, dolorem repellat accusantium odio quasi
+            exercitationem quos quod. Tenetur ratione eius eos voluptates
+            assumenda a dolor voluptatem quo, ad eum, vero minima. Odit ad
+            tempore ea nemo, eius inventore magnam eveniet beatae, saepe odio
+            iusto neque porro illo cum consequatur nisi vel nesciunt ex
+            necessitatibus facere. Est sint dolorem mollitia accusantium optio
+            voluptas dolore, doloremque illum modi laudantium magnam odio esse,
+            eligendi tempore reiciendis atque assumenda similique. Reiciendis
+            quasi commodi ut magnam recusandae numquam doloremque dolor soluta a
+            harum tenetur, quibusdam, tempore accusantium eveniet cupiditate
+            dignissimos deserunt rem esse labore vitae itaque. Inventore, id
+            error eligendi, maiores aliquid quidem quas voluptatem ullam
+            accusantium exercitationem consequatur expedita ex! Quia, non. Dolor
+            eaque eligendi vero adipisci quisquam ut deleniti ratione temporibus
+            doloribus nobis? Nesciunt odit delectus eum libero beatae quas,
+            rerum iusto esse illo ipsum .
+          </p>
+        </div>
+
+        <div class="container3">
+          <div class="artical1"><h1>Project-1</h1></div>
+          <div class="artical2"><h1>Project-2</h1></div>
+          <div class="artical3"><h1>Project-3</h1></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec3">
+        
+      <h2  id="s3"> Technologies Used</h2>
+      <div class="container">
+        <div class="card">
+          <img src="../assets/THTML.png" alt="" />
+          <h3>Intoduction to HTML</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sit
+            at sunt a maiores repellat repellendus aut quisquam, ea modi
+            aspernatur pariatur laborum fuga nostrum, deleniti libero?
+            Cupiditate rerum dolores voluptate! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Molestiae amet officia voluptatibus!
+          </p>
+          <button type="submit">Read More</button>
+        </div>
+        <div class="card">
+          <img src="../assets/GSWCSS.png" alt="" />
+          <h3>Introduction to CSS</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            non. Alias iste id quae recusandae ullam commodi eveniet minima rem,
+            velit, hic blanditiis voluptate in ut? Quia quas eveniet repellat
+            praesentium quidem id quaerat odio?Lorem ipsum dolor sit amet
+            consectetur . Lorem ipsum dolor sit amet
+          </p>
+          <button type="submit">Read More</button>
+        </div>
+        <div class="card">
+          <img src="../assets/jquery.png" alt="" />
+          <h3>Intoduction to JavaScript</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+            suscipit ipsum dicta amet, voluptates rerum recusandae saepe quis
+            iure libero quibusdam, aliquid ex itaque autem temporibus illo
+            assumenda. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus maiores expedita;
+          </p>
+          <button type="submit">Read More</button>
+        </div>
+        <div class="card">
+          <img src="../assets/bootstrap.jpg" alt="" />
+          <h3>Introduction to Bootstrap</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+            tempora accusantium, velit blanditiis ducimus, magni assumenda quam
+            sit consequatur impedit delectus maiores et. Voluptate eligendi
+            temporibus illum sapiente totam quisquam consectetur?Lorem ipsum
+            dolor sit, amet consectetur adipisicing elit.
+          </p>
+
+          <button type="submit">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="sec4">
+      <h2>Contact</h2>
+      <div class="footer">
+        <p>Website Template for Practical-8 &copy; <a href="https://www.beta-labs.in" target="_blank">Beta-labs</a> </p>
+        <a href="#top" id="bot">Back to top</a>
+      </div>
+    </div>
+  </body>
+</html>
